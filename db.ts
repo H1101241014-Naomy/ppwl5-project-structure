@@ -1,3 +1,10 @@
+/* =========================
+  Issue: ada di root
+  Tugas:
+    1. Pindahkan ke file khusus, dalam folder yang sesuai (config/)
+    2. jangan gunakan process.env, tapi pakai import env
+========================= */
+
 import { Database } from "bun:sqlite";
 
 const dbFile = process.env.DB_FILE || "database.sqlite";

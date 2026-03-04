@@ -9,7 +9,7 @@ bun --watch index.ts
 ```
 
 ## Issue
-1. 📁 Struktur Kacau: Semua logic ada di satu file (`index.ts`). Lokasi file tidak diletakkan di `src/`.
+1. 📁 Struktur Kacau: Semua logic ada di satu file (`index.ts`). Lokasi file tidak diletakkan di `src/` (Private, not public).
 ```
 index.ts
 db.ts

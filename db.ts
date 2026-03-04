@@ -1,8 +1,9 @@
 /* =========================
   Issue: ada di root
   Tugas:
-    1. Pindahkan ke file khusus, dalam folder yang sesuai (config/)
-    2. jangan gunakan process.env, tapi pakai import env
+    1. Pindahkan ke file khusus, dalam folder yang sesuai (config/db.ts)
+    2. Pindahkan kode process.env ke dalam file khusus (config/env.ts) bersama env yang ada di index.ts
+    2. jangan gunakan `process.env`, tapi gunakan dari import env di env.ts
 ========================= */
 
 import { Database } from "bun:sqlite";

@@ -1,13 +1,14 @@
 import { Elysia } from "elysia";
+import { staticPlugin } from "@elysiajs/static";
 import { db, initDB } from "./db";
 
 /* =========================
    ENV (Issue: Langsung di index)
    Tugas: 
    1. pindahkan ke file khusus (config/env.ts), 
-   2. gunakan export const env = {...}, 
-   3. tambahkan DB_FILE = process.env.DB_FILE
-   4. cek kondisi if (!process.env.DB_FILE)
+   2. gunakan `export const env = {...}` untuk menyimpan data env
+   3. tambahkan property DB_FILE berisi process.env.DB_FILE ke dalam `const env = {...}`
+   4. cek kondisi if (!process.env.DB_FILE) console.warn("⚠ DB_FILE not set, using default database.sqlite");
 ========================= */
 
 const PORT = Number(process.env.PORT) || 3000;
@@ -217,6 +218,12 @@ const redirect = (url: string) =>
 ========================= */
 
 const app = new Elysia()
+  .use( // agarr css dapat dipanggil lewat SSR
+    staticPlugin({
+      assets: "public",
+      prefix: "/"
+    })
+  )
   .get("/", () => {
     try {
       const users = userService.getAllUsers();

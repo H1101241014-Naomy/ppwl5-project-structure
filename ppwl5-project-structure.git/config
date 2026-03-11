@@ -1,0 +1,9 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/H1101241014-Naomy/ppwl5-project-structure
+	fetch = +refs/heads/*:refs/remotes/origin/*
